@@ -1,0 +1,14 @@
+# Configuración para Firebase App Hosting (Next.js 15 Full-Stack SSR + API Routes)
+runConfig:
+  minInstances: 0
+  maxInstances: 2
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 1024
+
+env:
+  - variable: NODE_ENV
+    value: production
+    availability:
+      - BUILD
+      - RUNTIME

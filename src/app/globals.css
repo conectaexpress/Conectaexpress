@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --conecta-primary: #DE1025;
+  --conecta-dark: #B80D1F;
+  --conecta-deeper: #9E0B1A;
+  --conecta-soft: #FFF1F2;
+  --conecta-soft-border: #FCD4D8;
+  --conecta-white: #FFFFFF;
+  --conecta-bg: #F4F4F6;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  accent-color: #DE1025 !important;
+  outline-color: #DE1025;
+}
+
+body {
+  background-color: #F4F4F6;
+  color: #18181B;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #DE1025;
+  color: #FFFFFF;
+}
+
+/* Garantizar que ningún control nativo del navegador muestre bordes o resaltados azules */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none !important;
+}
+
+/* Estilo corporativo refinado para todos los campos de entrada, selectores y áreas de texto */
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+select,
+textarea {
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus,
+select:focus,
+textarea:focus {
+  border-color: #DE1025 !important;
+  box-shadow: 0 0 0 3px rgba(222, 16, 37, 0.1) !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #DE1025 !important;
+}
+
+/* Eliminar el fondo azul de autocompletado del navegador en inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #FAFAFB inset !important;
+  -webkit-text-fill-color: #18181B !important;
+  caret-color: #DE1025 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Mejora visual corporativa para tablas en todos los módulos */
+table thead tr {
+  background-color: #F8F8FA;
+  border-bottom: 1px solid #E4E4E7;
+}
+
+table thead th {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #52525B;
+  font-weight: 700;
+}
+
+table tbody tr {
+  transition: background-color 0.12s ease;
+}
+
+table tbody tr:hover {
+  background-color: #FFF8F9 !important;
+}
+
+/* Sobrescritura explícita de seguridad para mantener la identidad cromática */
+.bg-conecta {
+  background-color: #DE1025 !important;
+}
+.text-conecta {
+  color: #DE1025 !important;
+}
+.border-conecta {
+  border-color: #DE1025 !important;
+}
+.bg-neutral-900 {
+  background-color: #18181B !important;
+}
+.bg-neutral-800 {
+  background-color: #27272A !important;
+}
+.text-neutral-900 {
+  color: #18181B !important;
+}
+.text-neutral-800 {
+  color: #27272A !important;
+}
+.text-neutral-700 {
+  color: #3F3F46 !important;
+}
+.border-neutral-900 {
+  border-color: #18181B !important;
+}
+
+/* Scrollbar corporativo sobrio */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1AA;
+}
